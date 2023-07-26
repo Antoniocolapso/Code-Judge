@@ -1,0 +1,1 @@
+print("hi mighty guy")
