@@ -1,86 +1,282 @@
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #f8e71c; /* Vivid yellow background */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border-radius: 4px;
-  transition: background-color 0.3s;
-}
-
-.container.dark-mode {
-  background-color: #3d3d3d; /* Dark gray background */
-  color: #fff;
-}
-
-h1 {
-  text-align: center;
-  font-size: 24px;
-  margin-bottom: 20px;
-  color: #333; /* Dark gray text */
-}
-
-.textarea {
-  width: 100%;
-  height: 300px;
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  resize: vertical;
-  margin-bottom: 20px;
-  transition: background-color 0.3s;
-}
-
-.textarea.dark-mode {
-  background-color: #555;
-  color: #fff;
-}
-
-button {
-  display: block;
-  margin: 0 auto;
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #ff5722; /* Vivid orange button */
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-button.dark-mode {
-  background-color: #004799; /* Dark blue button */
-}
-
-button:hover {
-  background-color: #ff784e; /* Lighter shade of orange on hover */
-}
-
-button:active {
-  background-color: #ff3d00; /* Darker shade of orange on active */
-}
-
-p {
-  font-size: 16px;
-  margin-top: 20px;
-  white-space: pre-wrap;
-  transition: color 0.3s;
-}
-
-p.dark-mode {
-  color: #fff;
-}
-
-body {
-  font-family: 'Roboto', sans-serif;
-  background-color: #f9f9f9;
+/* Reset styles */
+* {
   margin: 0;
   padding: 0;
-  transition: background-color 0.3s;
+  box-sizing: border-box;
 }
 
-body.dark-mode {
-  background-color: #222;
+/* General styles */
+body {
+  background-color: #0e1516;
+  color: #aaa;
+  font-size: 1.25rem;
+}
+
+a {
+  text-decoration: none;
+  color: #aaa;
+}
+
+a:hover,
+a:active {
+  color: #fafafa;
+}
+
+/* Navbar styles */
+.navbar-light .navbar-brand,
+.navbar-light .navbar-brand:hover {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.navbar {
+  padding: 25px;
+}
+
+/* Dark Mode styles */
+.dark-mode {
+  background-color: #0e1516;
+  color: #aaa;
+}
+
+/* Container styles */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Header styles */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+/* Language select styles */
+.language-select {
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+}
+
+/* Textarea styles */
+.textarea {
+  resize: vertical;
+  padding: 10px;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+}
+
+/* Submit button styles */
+button {
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  background-color: #dfdfdf;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Output paragraph styles */
+p {
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+}
+
+/* Dark Mode button styles */
+button.dark-mode {
+  padding: 10px 20px;
+  background-color: #dfdfdf;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Dark Mode active styles */
+.container.dark-mode {
+  background-color: #0e1516;
+  color: #aaa;
+}
+
+/* Media queries */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+  .textarea {
+    font-size: 1rem;
+  }
+  button {
+    font-size: 1rem;
+  }
+}
+
+/* Additional styles for the previous website (you can remove these if not needed) */
+.fixed-top {
+  background-color: #0e1516;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  font-size: 4.5rem;
+  justify-content: center;
+  height: 100vh;
+  color: #fff;
+  padding: 0px 10%;
+}
+
+.home .name {
+  font-size: 6.5rem;
+  margin-bottom: 30px;
+}
+
+.home font,
+.project font {
+  color: rgb(222, 176, 76);
+}
+
+.projects,
+.services,
+.about,
+.contact {
+  margin-top: 100px;
+  text-align: center;
+  color: #fff;
+}
+
+.about {
+  font-size: 1.5rem;
+  width: 58%;
+  margin: 100px auto;
+  text-align: center;
+}
+
+.contact {
+  width: 100%;
+  text-align: left;
+  margin: 100px auto 0;
+}
+
+.contact h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.contact-data {
+  border-left: 1px solid #dfdfdf;
+  padding-left: 40px;
+  display: block;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+}
+
+.content p {
+  text-align: justify;
+}
+
+.projects .wrapper,
+.services .wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0 20px 0;
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.card {
+  background-color: transparent;
+}
+
+.services {
+}
+
+.about {
+}
+
+.contact {
+}
+
+.progress-bar-animate {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: #fafafa;
+  transform-origin: 0%;
+  z-index: 1050;
+}
+
+@media (max-width: 1000px) {
+  .home {
+    font-size: 3.5rem;
+  }
+  .home .name {
+    font-size: 5.5rem;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 800px) {
+  .contact-data {
+    border-left: none;
+    margin: 30px 0px;
+    padding: 40px 0px 0px 0px;
+    border-top: 1px solid #fafafa;
+  }
+  .home {
+    font-size: 2.5rem;
+  }
+  .home .name {
+    font-size: 4.5rem;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .about {
+    margin: 100px auto;
+    width: 90%;
+  }
+  .home {
+    font-size: 2.5rem;
+  }
+  .home .name {
+    font-size: 3.5rem;
+    margin-bottom: 30px;
+  }
+}
+
+.list-group-item a {
+  color: #000;
+}
+
+.list-group-item:hover {
+  background-color: #0e1516;
+  border: 1px solid #fafafa;
+}
+
+.list-group-item a:hover,
+.list-group-item:hover a {
+  color: #fafafa;
+}
+
+.navbar-toggler {
+  background-color: #ffffff;
 }
