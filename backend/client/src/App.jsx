@@ -38,16 +38,16 @@ function App() {
   const handleCopyCode = () => {
     console.log("copieid the follwing code :", code);
     navigator.clipboard.writeText(code);
-    // toast.success('Code copied to clipboard!');
-    toast({
-      title: "Code copied to clipboard!",
-      description: "",
-      status: "success",
-      duration: 4000,
-      isClosable: true,
-      position: "bottom",
-    });
-  };
+    toast.success('Code copied to clipboard!');
+  //   toast({
+  //     title: "Code copied to clipboard!",
+  //     description: "",
+  //     status: "success",
+  //     duration: 4000,
+  //     isClosable: true,
+  //     position: "bottom",
+  //   });
+  // };
 
   const handleSavePDF = () => {
     console.log("Code saved as PDF!")
