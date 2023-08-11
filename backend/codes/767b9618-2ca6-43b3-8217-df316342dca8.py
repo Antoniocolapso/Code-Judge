@@ -1,1 +1,0 @@
-print("hi mighty guy")

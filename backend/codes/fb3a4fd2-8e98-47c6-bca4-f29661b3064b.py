@@ -1,1 +1,0 @@
-pint("hi mighty guy")

@@ -1,5 +1,5 @@
-node index.js   //it will start code execution module on 5000/run
+// node index.js   //it will start code execution module on 5000/run
 
-npm start   //in client directory //it will start frontend compiler itself
+// npm start   //it will start frontend compile itself
 
 //by defaault lang is py
